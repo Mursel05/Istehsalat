@@ -1,0 +1,41 @@
+import React from "react";
+import { DataContext } from "../App";
+
+const DeleteWorker = () => {
+  const { fetchData } = React.useContext(DataContext);
+  const [fin, setFin] = React.useState("");
+  async function handleForm(e) {
+    e.preventDefault();
+    try {
+      await fetch("http://localhost:4000/removeWorker", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ fin }),
+      });
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return (
+    <React.Fragment>
+      <form action="/" onSubmit={handleForm}>
+        <h3>Sil</h3>
+        <div>
+          <label htmlFor="id">Fin: </label>
+          <input
+            value={fin}
+            onChange={(e) => setFin(e.target.value)}
+            type="text"
+          />
+        </div>
+        <button>Sil</button>
+      </form>
+    </React.Fragment>
+  );
+};
+
+export default DeleteWorker;
