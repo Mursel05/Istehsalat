@@ -9,7 +9,7 @@ const Navbar = () => {
         <span onClick={() => navigate("/")}>İstehsalat</span>
         <div style={{ display: "flex", gap: "1rem" }}>
           <NavLink to="/">Giriş / Çıxış</NavLink>
-          <NavLink to="/addUser">İşçi əlave et</NavLink>
+          <NavLink to="/addUser">İşçi əlavə et</NavLink>
           <NavLink to="/delete">İşçi sil</NavLink>
           <NavLink to="/users">İşçilər</NavLink>
           <NavLink to="/">Məzuniyyət</NavLink>

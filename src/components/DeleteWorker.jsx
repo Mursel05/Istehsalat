@@ -15,6 +15,7 @@ const DeleteWorker = () => {
         },
         body: JSON.stringify({ fin }),
       });
+      setFin("");
       fetchData();
     } catch (error) {
       console.log(error);

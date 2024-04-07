@@ -1,9 +1,27 @@
 import React from "react";
+import { DataContext } from "../App";
 
 const EnterExitWorkers = () => {
+  const { fetchData } = React.useContext(DataContext);
   const [fin, setFin] = React.useState("");
-  function handleForm(e) {
+  async function handleForm(e) {
     e.preventDefault();
+    try {
+      await fetch("http://localhost:4000/addActivity", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fin,
+        }),
+      });
+      setFin("");
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

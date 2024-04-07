@@ -18,6 +18,10 @@ const AddWorker = () => {
         },
         body: JSON.stringify({ name, surname, fin, salary, activity: [] }),
       });
+      setName("");
+      setSurname("");
+      setSalary("");
+      setFin("");
       fetchData();
     } catch (error) {
       console.log(error);
