@@ -10,13 +10,13 @@ const Worker = () => {
     <React.Fragment>
       <div
         style={{ display: "flex", flexDirection: "column", marginTop: "1rem" }}>
-        <span>Name: {worker.name}</span>
-        <span>Surname: {worker.surname}</span>
-        <span>Fin: {worker.fin}</span>
-        <span>Salary: {worker.salary}</span>
+        <span>Name: {worker?.name}</span>
+        <span>Surname: {worker?.surname}</span>
+        <span>Fin: {worker?.fin}</span>
+        <span>Salary: {worker?.salary}</span>
         <div>
-          {worker.activity &&
-            worker.activity.map((item, index) => (
+          {worker?.activity &&
+            worker?.activity.map((item, index) => (
               <div key={index}>
                 <span>day: {item.day}</span>
                 <div>
