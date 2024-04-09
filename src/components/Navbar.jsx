@@ -13,6 +13,8 @@ const Navbar = () => {
           <NavLink to="/delete">İşçi sil</NavLink>
           <NavLink to="/users">İşçilər</NavLink>
           <NavLink to="/">Məzuniyyət</NavLink>
+          <NavLink to="/">Məzuniyyət</NavLink>
+          <NavLink to="/">Məzuniyyət</NavLink>
         </div>
       </div>
     </React.Fragment>

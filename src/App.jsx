@@ -6,6 +6,7 @@ import AddWorker from "./components/AddWorker";
 import { createContext, useEffect, useState } from "react";
 import Workers from "./components/Workers";
 import DeleteWorker from "./components/DeleteWorker";
+import Worker from "./components/Worker";
 
 export const DataContext = createContext(null);
 
@@ -20,7 +21,6 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(workers);
   return (
     <DataContext.Provider value={{ workers, fetchData }}>
       <BrowserRouter>
@@ -30,6 +30,7 @@ function App() {
           <Route path="/addUser" element={<AddWorker />} />
           <Route path="/users" element={<Workers />} />
           <Route path="/delete" element={<DeleteWorker />} />
+          <Route path="/users/:fin" element={<Worker />} />
         </Routes>
       </BrowserRouter>
     </DataContext.Provider>
