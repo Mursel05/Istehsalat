@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { url } from "../App";
 
 const Graduation = () => {
   const [fin, setFin] = useState("");
@@ -7,6 +8,13 @@ const Graduation = () => {
 
   async function handleForm(e) {
     e.preventDefault();
+    await fetch(url + "/graduation", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fin, startTime, endTime }),
+    });
   }
   return (
     <React.Fragment>
