@@ -8,6 +8,7 @@ import Workers from "./components/Workers";
 import DeleteWorker from "./components/DeleteWorker";
 import Worker from "./components/Worker";
 import Graduation from "./components/Graduation";
+import Calendar from "./components/Calendar";
 
 export const DataContext = createContext(null);
 export const url =
@@ -36,6 +37,8 @@ function App() {
           <Route path="/delete" element={<DeleteWorker />} />
           <Route path="/users/:fin" element={<Worker />} />
           <Route path="/graduation" element={<Graduation />} />
+          <Route path="/calendar" element={<Calendar />} />
+
         </Routes>
       </BrowserRouter>
     </DataContext.Provider>
