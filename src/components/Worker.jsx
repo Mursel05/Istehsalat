@@ -15,8 +15,9 @@ const Worker = () => {
         <span>Fin: {worker?.fin}</span>
         <span>Salary: {worker?.salary}</span>
         <div>
-          {worker?.activity &&
-            worker?.activity.map((item, index) => (
+          <p>Fəaliyyət</p>
+          <div>
+            {worker?.activity?.map((item, index) => (
               <div key={index}>
                 <span>day: {item.day}</span>
                 <div>
@@ -30,6 +31,16 @@ const Worker = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div>
+          <p>Məzuniyyət</p>
+          {worker?.graduation?.map((item, index) => (
+            <div key={index} style={{ display: "flex", gap: "1rem" }}>
+              <span>Başladığı tarix: {item.startTime}</span>
+              <span>Bitdiyi tarix: {item.endTime}</span>
+            </div>
+          ))}
         </div>
       </div>
     </React.Fragment>

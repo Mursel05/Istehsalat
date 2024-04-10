@@ -1,20 +1,29 @@
-import React, { useState } from "react";
-import { url } from "../App";
+import React, { useContext, useState } from "react";
+import { DataContext, url } from "../App";
 
 const Graduation = () => {
+  const { fetchData } = useContext(DataContext);
   const [fin, setFin] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
   async function handleForm(e) {
     e.preventDefault();
-    await fetch(url + "/graduation", {
+    await fetch(url + "/addGraduation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ fin, startTime, endTime }),
+      body: JSON.stringify({
+        fin,
+        startTime,
+        endTime,
+      }),
     });
+    setFin("");
+    setStartTime("");
+    setEndTime("");
+    fetchData();
   }
   return (
     <React.Fragment>

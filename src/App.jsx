@@ -10,7 +10,9 @@ import Worker from "./components/Worker";
 import Graduation from "./components/Graduation";
 
 export const DataContext = createContext(null);
-export const url = "https://istehsalat.onrender.com";
+export const url =
+  "https://istehsalat.onrender.com"
+  // "http://localhost:4000";
 
 function App() {
   const [workers, setWorkers] = useState([]);

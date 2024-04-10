@@ -12,7 +12,7 @@ const Navbar = () => {
           <NavLink to="/addUser">İşçi əlavə et</NavLink>
           <NavLink to="/delete">İşçi sil</NavLink>
           <NavLink to="/users">İşçilər</NavLink>
-          <NavLink to="/">Məzuniyyət</NavLink>
+          <NavLink to="/graduation">Məzuniyyət</NavLink>
           <NavLink to="/">Məzuniyyət</NavLink>
           <NavLink to="/">Məzuniyyət</NavLink>
         </div>
