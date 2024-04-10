@@ -1,7 +1,6 @@
-import React from "react";
 
-const data = () => {
-  const CalendarArray = [
+
+ export const CalendarArray = [
     {
       monthName: "Yanvar",
       hours: 151,
@@ -89,8 +88,4 @@ const data = () => {
         30,
       ],
     },
-  ];
-  return <></>;
-};
-
-export default data;
+  ]; 
