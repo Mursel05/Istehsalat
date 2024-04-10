@@ -7,6 +7,7 @@ import { createContext, useEffect, useState } from "react";
 import Workers from "./components/Workers";
 import DeleteWorker from "./components/DeleteWorker";
 import Worker from "./components/Worker";
+import Graduation from "./components/Graduation";
 
 export const DataContext = createContext(null);
 export const url = "https://istehsalat.onrender.com";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/users" element={<Workers />} />
           <Route path="/delete" element={<DeleteWorker />} />
           <Route path="/users/:fin" element={<Worker />} />
+          <Route path="/graduation" element={<Graduation />} />
         </Routes>
       </BrowserRouter>
     </DataContext.Provider>
