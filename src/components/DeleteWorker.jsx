@@ -1,5 +1,5 @@
 import React from "react";
-import { DataContext } from "../App";
+import { DataContext, url } from "../App";
 
 const DeleteWorker = () => {
   const { fetchData } = React.useContext(DataContext);
@@ -7,7 +7,7 @@ const DeleteWorker = () => {
   async function handleForm(e) {
     e.preventDefault();
     try {
-      await fetch("http://localhost:4000/removeWorker", {
+      await fetch(url + "/removeWorker", {
         method: "POST",
         headers: {
           accept: "application/json",

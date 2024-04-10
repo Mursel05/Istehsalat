@@ -9,11 +9,12 @@ import DeleteWorker from "./components/DeleteWorker";
 import Worker from "./components/Worker";
 
 export const DataContext = createContext(null);
+export const url = "https://istehsalat.onrender.com";
 
 function App() {
   const [workers, setWorkers] = useState([]);
   async function fetchData() {
-    const response = await fetch("http://localhost:4000/getWorkers");
+    const response = await fetch(url + "/getWorkers");
     const data = await response.json();
     if (data) setWorkers(data);
   }
